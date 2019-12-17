@@ -1,8 +1,6 @@
 // #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
-zenDutyApiKey =
-  process.env.HUBOT_ZENDUTY_API_KEY ||
-  "a14844919d01b469c78f6513bdc558559203e9a1"; //remove API key.
+zenDutyApiKey = process.env.HUBOT_ZENDUTY_API_KEY;
 
 if (zenDutyApiKey == null) {
   console.log(
