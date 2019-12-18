@@ -1,3 +1,22 @@
+//  Description:
+//    Acknowledge or resolve a triggered incident and to get details about incidents on Zenduty
+//
+//  Dependencies:
+//    "zenduty-sdk": "1.0.3"
+//
+//  Configuration:
+//    HUBOT_ZENDUTY_API_KEY
+//
+//  Commands:
+//    hubot get <Incident Number> : To get a specific incident's details.
+//    hubot zen ack <Incident Number> : To Acknowledge a specific incident.
+//    hubot zen res <Incident Number> : To Resolve a specific incident.
+//    hubot zen incidents <Page Number> : To get all incidents from a specific page( 1 being the latest set of incidents ).
+//    hubot zen help : To get the list of commands used by hubotzen.
+//
+//  Author:
+//    windynik
+
 zenDutyApiKey = process.env.HUBOT_ZENDUTY_API_KEY;
 
 if (zenDutyApiKey == null) {
@@ -114,14 +133,19 @@ module.exports = function(robot) {
   robot.respond(/zen help/i, function(res) {
     res.send(`Currently, you can use the following commands with Zen : `);
     res.send(
-      `hubot get <Incident Number> : To get a specific incident's details.`
+      `hubot zen get <Incident Number> : To get a specific incident's details.`
     );
     res.send(
-      `hubot ack <Incident Number> : To Acknowledge a specific incident.`
+      `hubot zen ack <Incident Number> : To Acknowledge a specific incident.`
     );
-    res.send(`hubot res <Incident Number> : To Resolve a specific incident.`);
     res.send(
-      `hubot incidents <Page Number> : To get all incidents from a specific page \n( 1 being the latest set of incidents ).`
+      `hubot zen res <Incident Number> : To Resolve a specific incident.`
+    );
+    res.send(
+      `hubot zen incidents <Page Number> : To get all incidents from a specific page \n( 1 being the latest set of incidents ).`
+    );
+    res.send(
+      `hubot zen help : To reiterate what was mentioned above ( use me any time! )`
     );
     res.send(`\n\nContact my makers to request for more commands`);
     res.send(`Happy Zenning! :)`);
