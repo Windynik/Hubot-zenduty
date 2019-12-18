@@ -34,7 +34,7 @@ Assigned To :  Maximus
 Status : Triggered
 ```
 
-### Acknowledge a incident
+### Acknowledge an incident
 
 ```
 User> @hubot zen ack 1
@@ -42,7 +42,7 @@ Hubot> @user Give me a second to Acknowledge incident number 1 ...
 Hubot> Ok, the incident has been Acknowledged.
 ```
 
-### Resolving a incident
+### Resolving an incident
 
 ```
 User> @hubot zen res 1
