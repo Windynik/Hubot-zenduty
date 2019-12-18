@@ -1,9 +1,22 @@
 {
   "name": "hubotzen",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "windynik <nikhilprem@rocketmail.com>",
   "description": "Custom Zenduty scripts for your hubot integration",
   "main": "index.coffee",
+  "license": "ISC",
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "zenduty"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Windynik/Hubot-zenduty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Windynik/Hubot-zenduty/issues"
+  },
   "dependencies": {
     "grunt-cli": "^1.3.2",
     "hubot": "^3.3.2",
